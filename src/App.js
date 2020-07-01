@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Form from './components/Form'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles({
+    root: {
+        maxWidth: 500,
+    },
+})
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const classes = useStyles()
+    return (
+        <div>
+            <Card className={classes.root}>
+                <CardContent>
+                    <Form />
+                </CardContent>
+            </Card>
+        </div>
+    )
 }
 
-export default App;
+export default App
